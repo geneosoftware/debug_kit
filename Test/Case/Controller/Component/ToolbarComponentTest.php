@@ -147,10 +147,10 @@ class ToolbarComponentTestCase extends CakeTestCase {
 /**
  * Test exceptions on bad panel names
  *
- * @expectedException PHPUnit_Framework_Error
  * @return void
  */
 	public function testLoadPanelsError() {
+		$this->expectExceptionCode(\PHPUnit\Framework\Error::class);
 		$this->Controller->Toolbar->loadPanels(array('randomNonExisting', 'request'));
 	}
 
